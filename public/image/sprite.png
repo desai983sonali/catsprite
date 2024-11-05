@@ -1,0 +1,9 @@
+
+import catsprite from 'c:\Users\sonal\OneDrive\Pictures\Screenshots\catsprite.png';
+
+function MyComponent() {
+  return <img src=c:\Users\sonal\OneDrive\Pictures\Screenshots\catsprite.png alt="Cat Sprite" />;
+}
+
+
+
