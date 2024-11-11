@@ -17,7 +17,7 @@ const SpritePreview = ({ commands }) => {
       }
     };
     executeCommands();
-  }, [commands]);
+  }, [rotation]);
 
   return (
     <div style={{ position: 'relative', width: '200px', height: '200px', border: '1px solid #ddd', marginTop: '20px' }}>
