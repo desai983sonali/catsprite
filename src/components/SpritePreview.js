@@ -9,7 +9,10 @@ const SpritePreview = ({ commands }) => {
     const executeCommands = async () => {
       for (let command of commands) {
         if (command === 'MOVE') {
-          setPosition((pos) => ({ x: pos.x + 10 * Math.cos((rotation * Math.PI) / 180), y: pos.y + 10 * Math.sin((rotation * Math.PI) / 180) }));
+          setPosition((pos) => ({
+            x: pos.x + 10 * Math.cos((rotation * Math.PI) / 180),
+            y: pos.y + 10 * Math.sin((rotation * Math.PI) / 180),
+          }));
         } else if (command === 'TURN') {
           setRotation((rot) => rot + 15);
         }
@@ -17,12 +20,12 @@ const SpritePreview = ({ commands }) => {
       }
     };
     executeCommands();
-  }, [rotation]);
+  }, [commands, rotation]); // Added 'commands' as a dependency
 
   return (
     <div style={{ position: 'relative', width: '200px', height: '200px', border: '1px solid #ddd', marginTop: '20px' }}>
       <img
-        src="c:\Users\sonal\OneDrive\Pictures\Screenshots\catsprite.png"
+        src="c:/Users/sonal/OneDrive/Pictures/Screenshots/catsprite.png"
         alt="sprite"
         style={{
           position: 'absolute',
@@ -34,6 +37,10 @@ const SpritePreview = ({ commands }) => {
       />
     </div>
   );
+};
+
+export default SpritePreview;
+
 };
 
 export default SpritePreview;
